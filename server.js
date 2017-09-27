@@ -184,7 +184,7 @@ APP.put('/api/inventory/:id', function(request, response){
 });
 
 /* Delete one item from the inventory table */
-APP.delete('/api/inventory/:id', function(request, response){
+APP.delete('/api/inventory/', function(request, response){
   CLIENT.query(`DELETE FROM inventory WHERE id=$1;`, [request.params.id]);
 });
 
